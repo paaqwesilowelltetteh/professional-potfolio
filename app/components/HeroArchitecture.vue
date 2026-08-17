@@ -13,7 +13,7 @@
         <span>Capability Map</span>
         <strong>Production Backend System</strong>
       </div>
-      
+
       <div class="system-orbit-map">
         <svg class="orbit-bg-svg" viewBox="0 0 400 240" fill="none" aria-hidden="true">
           <circle cx="200" cy="120" r="85" stroke="var(--line-bright)" stroke-dasharray="4 6" opacity="0.4" />
