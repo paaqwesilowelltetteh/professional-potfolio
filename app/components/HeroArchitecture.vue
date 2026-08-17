@@ -5,13 +5,15 @@
   >
     <div class="portrait-card">
       <img
-        src="/images/enoch-tetteh-profile.jpg"
+        src="/images/enoch.jpg"
         alt="Enoch Tetteh"
         loading="eager"
       />
-      <div>
-        <strong>Backend Architecture & Laravel Specialist</strong>
-        <span>PHP · Laravel · REST APIs · Redis · Nuxt 4</span>
+      <div class="rounded-2xl bg-white/70 p-4 backdrop-blur-sm dark:bg-gray-900/70">
+        <strong class="block">Backend Architecture & Laravel Specialist</strong>
+        <span class="text-gray-600 dark:text-gray-300">
+          PHP · Laravel · REST APIs · Redis · Nuxt 4
+        </span>
       </div>
     </div>
 
