@@ -1,7 +1,14 @@
 <template>
-  <div class="hero-showcase reveal-up" aria-label="Professional profile and system capability map">
+  <div
+    class="hero-showcase reveal-up"
+    aria-label="Professional profile and system capability map"
+  >
     <div class="portrait-card">
-      <img src="/images/enoch-tetteh-profile.jpg" alt="Enoch Tetteh" loading="eager" />
+      <img
+        src="/images/enoch-tetteh-profile.jpg"
+        alt="Enoch Tetteh"
+        loading="eager"
+      />
       <div>
         <strong>Backend Architecture & Laravel Specialist</strong>
         <span>PHP · Laravel · REST APIs · Redis · Nuxt 4</span>
@@ -15,13 +22,60 @@
       </div>
 
       <div class="system-orbit-map">
-        <svg class="orbit-bg-svg" viewBox="0 0 400 240" fill="none" aria-hidden="true">
-          <circle cx="200" cy="120" r="85" stroke="var(--line-bright)" stroke-dasharray="4 6" opacity="0.4" />
-          <line x1="200" y1="120" x2="60" y2="40" stroke="var(--line)" stroke-width="1" />
-          <line x1="200" y1="120" x2="340" y2="40" stroke="var(--line)" stroke-width="1" />
-          <line x1="200" y1="120" x2="50" y2="190" stroke="var(--line)" stroke-width="1" />
-          <line x1="200" y1="120" x2="350" y2="190" stroke="var(--line)" stroke-width="1" />
-          <line x1="200" y1="120" x2="200" y2="20" stroke="var(--line)" stroke-width="1" />
+        <svg
+          class="orbit-bg-svg"
+          viewBox="0 0 400 240"
+          fill="none"
+          aria-hidden="true"
+        >
+          <circle
+            cx="200"
+            cy="120"
+            r="85"
+            stroke="var(--line-bright)"
+            stroke-dasharray="4 6"
+            opacity="0.4"
+          />
+          <line
+            x1="200"
+            y1="120"
+            x2="60"
+            y2="40"
+            stroke="var(--line)"
+            stroke-width="1"
+          />
+          <line
+            x1="200"
+            y1="120"
+            x2="340"
+            y2="40"
+            stroke="var(--line)"
+            stroke-width="1"
+          />
+          <line
+            x1="200"
+            y1="120"
+            x2="50"
+            y2="190"
+            stroke="var(--line)"
+            stroke-width="1"
+          />
+          <line
+            x1="200"
+            y1="120"
+            x2="350"
+            y2="190"
+            stroke="var(--line)"
+            stroke-width="1"
+          />
+          <line
+            x1="200"
+            y1="120"
+            x2="200"
+            y2="20"
+            stroke="var(--line)"
+            stroke-width="1"
+          />
         </svg>
 
         <!-- Central Core Hub Node -->
@@ -89,18 +143,20 @@
   justify-content: center;
   padding: 0.75rem 1.1rem;
   border-radius: var(--radius-md);
-  background: var(--navy-primary);
-  border: 1px solid var(--accent);
+  background: var(--bg-elevated);
+  border: 1px solid var(--line-bright);
   color: var(--heading);
-  box-shadow: 0 0 30px var(--shadow-glow);
+  box-shadow: var(--shadow-glow);
   z-index: 10;
   text-align: center;
+  transition: background 0.3s, color 0.3s, border-color 0.3s, box-shadow 0.3s;
 }
 
 .core-hub-node strong {
   font-size: 0.9rem;
   margin-top: 0.2rem;
   color: var(--heading);
+  transition: color 0.3s;
 }
 
 .core-hub-node span {
@@ -108,6 +164,7 @@
   color: var(--accent-strong);
   text-transform: uppercase;
   font-weight: 700;
+  transition: color 0.3s;
 }
 
 .orbit-node {
@@ -133,14 +190,39 @@
   transform: scale(1.05);
 }
 
-.node-1 { top: 12%; left: 8%; animation-delay: 0s; }
-.node-2 { top: 10%; right: 8%; animation-delay: -1s; }
-.node-3 { bottom: 12%; left: 6%; animation-delay: -2s; }
-.node-4 { bottom: 12%; right: 6%; animation-delay: -3s; }
-.node-5 { top: 4%; left: 38%; animation-delay: -4s; }
+.node-1 {
+  top: 12%;
+  left: 8%;
+  animation-delay: 0s;
+}
+.node-2 {
+  top: 10%;
+  right: 8%;
+  animation-delay: -1s;
+}
+.node-3 {
+  bottom: 12%;
+  left: 6%;
+  animation-delay: -2s;
+}
+.node-4 {
+  bottom: 12%;
+  right: 6%;
+  animation-delay: -3s;
+}
+.node-5 {
+  top: 4%;
+  left: 38%;
+  animation-delay: -4s;
+}
 
 @keyframes orbitFloat {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-6px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
 }
 </style>
