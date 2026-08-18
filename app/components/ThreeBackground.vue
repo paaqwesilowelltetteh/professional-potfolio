@@ -45,10 +45,10 @@ onMounted(async () => {
     geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3))
 
     const particleMaterial = new THREE.PointsMaterial({
-      color: 0x38bdf8,
+      color: 0x22c55e,
       size: 3.5,
       transparent: true,
-      opacity: 0.85,
+      opacity: 0.75,
       blending: THREE.AdditiveBlending,
     })
 
@@ -56,9 +56,9 @@ onMounted(async () => {
     scene.add(particleSystem)
 
     const lineMaterial = new THREE.LineBasicMaterial({
-      color: 0x2563eb,
+      color: 0x16a34a,
       transparent: true,
-      opacity: 0.2,
+      opacity: 0.18,
       blending: THREE.AdditiveBlending,
     })
 

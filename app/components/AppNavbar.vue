@@ -35,7 +35,7 @@ onBeforeUnmount(() => {
 <template>
   <header class="site-header">
     <a class="brand" href="#home" aria-label="Enoch Tetteh home">
-      <span>ET</span>
+      <span aria-hidden="true">ET</span>
       <strong>Enoch Tetteh</strong>
     </a>
 
@@ -51,12 +51,17 @@ onBeforeUnmount(() => {
     </nav>
 
     <div class="header-actions">
+      <a class="header-cv-link" href="/Enoch_Tetteh_CV.pdf" download aria-label="Download CV">
+        <AppIcon name="arrow-top-right" size="0.85em" />
+        Download CV
+      </a>
       <ThemeToggle />
       <button
         class="menu-toggle"
         type="button"
         :aria-expanded="isOpen"
         aria-controls="mobile-menu"
+        aria-label="Toggle navigation menu"
         @click="isOpen = !isOpen"
       >
         <AppIcon name="menu" size="1.2em" />
@@ -73,6 +78,28 @@ onBeforeUnmount(() => {
       >
         {{ item.label }}
       </a>
+      <a class="mobile-nav-cv" href="/Enoch_Tetteh_CV.pdf" download @click="close">
+        <AppIcon name="arrow-top-right" size="0.85em" />
+        Download CV
+      </a>
     </nav>
   </header>
 </template>
+
+<style scoped>
+.mobile-nav-cv {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1rem;
+  border-radius: var(--radius-md);
+  color: var(--accent-strong);
+  font-weight: 700;
+  border-top: 1px solid var(--line);
+  margin-top: 0.25rem;
+}
+
+.mobile-nav-cv:hover {
+  background: var(--accent-soft);
+}
+</style>

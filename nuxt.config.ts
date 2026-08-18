@@ -1,6 +1,7 @@
 /// <reference path="./env.d.ts" />
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  modules: ['@vercel/analytics'],
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
   css: ["~/assets/css/main.css"],
@@ -9,7 +10,7 @@ export default defineNuxtConfig({
       charset: "utf-8",
       viewport: "width=device-width, initial-scale=1",
       meta: [
-        { name: "theme-color", content: "#070b14" },
+        { name: "theme-color", content: "#16a34a" },
       ],
       link: [
         { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },

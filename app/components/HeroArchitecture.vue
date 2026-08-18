@@ -6,11 +6,13 @@
     <div class="portrait-card">
       <img
         src="/images/enoch.jpg"
-        alt="Enoch Tetteh"
+        alt="Enoch Tetteh, Full-Stack Software Developer"
         loading="eager"
+        width="560"
+        height="480"
       />
       <div class="rounded-2xl bg-white/70 p-4 backdrop-blur-sm dark:bg-gray-900/70">
-        <strong class="block">Backend Architecture & Laravel Specialist</strong>
+        <strong class="block">Backend Architecture &amp; Laravel Specialist</strong>
         <span class="text-gray-600 dark:text-gray-300">
           PHP · Laravel · REST APIs · Redis · Nuxt 4
         </span>
@@ -82,35 +84,35 @@
 
         <!-- Central Core Hub Node -->
         <div class="core-hub-node">
-          <AppIcon name="cpu" size="1.3em" />
+          <AppIcon name="cpu" size="1.3em" aria-hidden="true" />
           <strong>Laravel Core</strong>
           <span>Backend Engine</span>
         </div>
 
         <!-- Orbit Floating System Nodes -->
         <div class="orbit-node node-1">
-          <AppIcon name="code" size="0.95em" />
+          <AppIcon name="code" size="0.95em" aria-hidden="true" />
           <span>REST APIs</span>
         </div>
 
         <div class="orbit-node node-2">
-          <AppIcon name="server" size="0.95em" />
+          <AppIcon name="server" size="0.95em" aria-hidden="true" />
           <span>Redis / Horizon</span>
         </div>
 
         <div class="orbit-node node-3">
-          <AppIcon name="database" size="0.95em" />
+          <AppIcon name="database" size="0.95em" aria-hidden="true" />
           <span>MySQL / Postgres</span>
         </div>
 
         <div class="orbit-node node-4">
-          <AppIcon name="layers" size="0.95em" />
+          <AppIcon name="layers" size="0.95em" aria-hidden="true" />
           <span>Nuxt 4 / Vue</span>
         </div>
 
         <div class="orbit-node node-5">
-          <AppIcon name="shield" size="0.95em" />
-          <span>Paystack Auth</span>
+          <AppIcon name="shield" size="0.95em" aria-hidden="true" />
+          <span>Payments</span>
         </div>
       </div>
     </div>

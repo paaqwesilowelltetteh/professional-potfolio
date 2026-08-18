@@ -86,6 +86,7 @@ export const projects: Project[] = [
     slug: "pebble",
     title: "Pebble - Streaming & Digital Content Platform",
     category: "Production Systems",
+    image: "/images/pebble-thumbnail.jpg",
     summary:
       "A production streaming platform for 10,000+ subscribers supporting podcasts, audio content, movies, series, creators, subscribers, payments, and premium content experiences.",
     role: "Software Developer / Backend & Full-Stack Engineering",
@@ -160,6 +161,7 @@ export const projects: Project[] = [
     slug: "traceable",
     title: "Traceable - Digital Traceability Platform",
     category: "Production Systems",
+    image: "/images/traceable-thumbnail.jpg",
     summary:
       "A USAID-sponsored agricultural digital traceability platform built for 5 SMEs, delivered with a five-person development team.",
     role: "Software Developer / Technical Lead",
@@ -284,6 +286,7 @@ export const projects: Project[] = [
     slug: "nuxt-bearer-auth",
     title: "Nuxt Bearer Auth",
     category: "Open Source",
+    image: "/images/open-source-thumbnail.jpg",
     summary:
       "Reusable Nuxt authentication module for APIs issuing bearer tokens. Features Redis-backed server sessions, HTTP-only cookie security, nuxt-csurf integration, SSR auth hydration, and useBearerAuth() / useAuth() composables.",
     role: "Creator & Maintainer",

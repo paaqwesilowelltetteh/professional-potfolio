@@ -18,16 +18,19 @@ useHead({
   htmlAttrs: { lang: 'en' },
   title: 'Enoch Tetteh | Full-Stack Software Developer & Laravel Specialist',
   meta: [
-    { name: 'description', content: 'Enoch Tetteh is a Full-Stack Software Developer specializing in PHP, Laravel, APIs, system architecture, Vue.js, Nuxt, and scalable production systems.' },
+    { name: 'description', content: 'Enoch Tetteh is a Full-Stack Software Developer and Backend & Laravel Specialist building scalable APIs, production web applications, payment systems, and modern Vue/Nuxt applications.' },
     { property: 'og:title', content: 'Enoch Tetteh | Full-Stack Software Developer & Laravel Specialist' },
-    { property: 'og:description', content: 'Backend-focused full-stack engineer building scalable APIs, production systems, technical specifications, and open-source Nuxt software.' },
+    { property: 'og:description', content: 'Enoch Tetteh is a Full-Stack Software Developer and Backend & Laravel Specialist building scalable APIs, production web applications, payment systems, and modern Vue/Nuxt applications.' },
     { property: 'og:type', content: 'website' },
+    { property: 'og:image', content: '/images/og-image.jpg' },
+    { property: 'og:url', content: 'https://enoch-portfolio.vercel.app/' },
     { name: 'twitter:card', content: 'summary_large_image' },
-    { name: 'twitter:title', content: 'Enoch Tetteh | Full-Stack Software Developer' },
-    { name: 'twitter:description', content: 'PHP & Laravel specialist with full-stack Vue, Nuxt, TypeScript, APIs, databases, and cloud infrastructure experience.' },
-    { name: 'theme-color', content: '#159a5b' },
+    { name: 'twitter:title', content: 'Enoch Tetteh | Full-Stack Software Developer & Laravel Specialist' },
+    { name: 'twitter:description', content: 'Enoch Tetteh is a Full-Stack Software Developer and Backend & Laravel Specialist building scalable APIs, production web applications, payment systems, and modern Vue/Nuxt applications.' },
+    { name: 'twitter:image', content: '/images/og-image.jpg' },
+    { name: 'theme-color', content: '#16a34a' },
   ],
-  link: [{ rel: 'canonical', href: 'https://enochtetteh.dev/' }],
+  link: [{ rel: 'canonical', href: 'https://enoch-portfolio.vercel.app/' }],
   script: [
     {
       innerHTML: "(() => { try { const stored = localStorage.getItem('portfolio-theme'); const preferred = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; const theme = stored === 'dark' || stored === 'light' ? stored : preferred; document.documentElement.dataset.theme = theme; document.documentElement.style.colorScheme = theme; } catch (_) {} })();",
@@ -39,7 +42,7 @@ useHead({
         '@context': 'https://schema.org',
         '@type': 'Person',
         name: 'Enoch Tetteh',
-        jobTitle: 'Full-Stack Software Developer',
+        jobTitle: 'Full-Stack Software Developer & Backend Specialist',
         address: { '@type': 'PostalAddress', addressCountry: 'Ghana' },
         email: 'mailto:mrenochtetteh@outlook.com',
         telephone: '+233241372895',
@@ -47,7 +50,7 @@ useHead({
           'https://github.com/paaqwesilowelltetteh',
           'https://www.linkedin.com/in/enoch-tetteh-b1b6371bb',
         ],
-        knowsAbout: ['PHP', 'Laravel', 'REST APIs', 'System Architecture', 'Vue.js', 'Nuxt', 'Technical Specifications', 'Redis', 'Payment Integrations'],
+        knowsAbout: ['PHP', 'Laravel', 'REST APIs', 'System Architecture', 'Vue.js', 'Nuxt', 'Technical Specifications', 'Redis', 'Payment Integrations', 'Queues', 'WebSockets', 'MySQL'],
         alumniOf: { '@type': 'CollegeOrUniversity', name: 'Pentecost University' },
       }),
     },
@@ -71,18 +74,32 @@ useHead({
           </div>
           <h1 class="gradient-text">Enoch Tetteh</h1>
           <h2>Full-Stack Software Developer</h2>
+          <div class="hero-specialist-badge">
+            <AppIcon name="cpu" size="1.05em" />
+            <span>Backend &amp; Laravel Specialist</span>
+          </div>
           <p class="hero-lede">Building scalable backend architecture, robust APIs, and modern web applications.</p>
-          <p class="hero-subcopy">PHP & Laravel specialist with full-stack experience in Vue.js, Nuxt 4, TypeScript, APIs, databases, payment integrations, Redis, queues, WebSockets, and cloud infrastructure.</p>
+          <p class="hero-subcopy">Specializing in PHP, Laravel, REST APIs, database architecture, payment integrations, Redis, queues, and cloud infrastructure, paired with full-stack Vue &amp; Nuxt engineering.</p>
           <div class="hero-actions">
-            <a class="button primary" href="#projects">View My Work</a>
-            <a class="button secondary" href="mailto:mrenochtetteh@outlook.com">Let's Talk</a>
+            <a class="button primary" href="#projects">
+              <AppIcon name="layers" size="1.05em" />
+              View Projects
+            </a>
+            <a class="button secondary" :href="cvPath" download>
+              <AppIcon name="arrow-top-right" size="1.05em" />
+              Download CV
+            </a>
+            <a class="button tertiary" href="#contact">
+              <AppIcon name="mail" size="1.05em" />
+              Contact Me
+            </a>
           </div>
           <SocialLinks />
         </div>
         <HeroArchitecture />
       </section>
 
-      <section class="metrics-strip section-shell" aria-label="Professional metrics">
+      <section class="metrics-strip section-shell" aria-label="Key highlights and impact">
         <MetricCard v-for="metric in metrics" :key="metric.label" :metric="metric" />
       </section>
 
@@ -91,7 +108,7 @@ useHead({
         <div class="content-stack">
           <p>I am a software developer with 6+ years of professional experience designing, building, maintaining, and deploying production web applications and backend systems.</p>
           <p>My strongest area is PHP and Laravel backend engineering: REST APIs, authentication and authorization, relational database architecture, payment integrations, asynchronous processing, Redis-based systems, queues, WebSockets, and third-party integrations.</p>
-          <p>I also work across Vue.js, Nuxt.js, TypeScript, and Tailwind CSS, which helps me connect backend architecture to user-facing interfaces and complete product workflows.</p>
+          <p>I also work across Vue.js, Nuxt.js, TypeScript, and Tailwind CSS, connecting robust backend architecture to polished user-facing interfaces and complete product workflows.</p>
           <div class="education-card">
             <span>Education</span>
             <strong>BSc Information Technology</strong>
@@ -124,16 +141,19 @@ useHead({
         <div class="open-source-layout">
           <ProjectCaseStudy :project="projects.find((project) => project.slug === 'nuxt-bearer-auth')!" variant="open" />
           <div class="case-study-panel">
-            <p class="eyebrow">Expanded Case Study</p>
+            <p class="eyebrow">Featured Package</p>
             <h3>Nuxt Bearer Auth</h3>
             <dl>
-              <div><dt>Overview</dt><dd>An open-source Nuxt Bearer Authentication package designed to simplify bearer-token authentication in Nuxt applications.</dd></div>
-              <div><dt>My Role</dt><dd>Creator & Maintainer</dd></div>
+              <div><dt>Overview</dt><dd>An open-source Nuxt authentication package designed to simplify bearer-token authentication in Nuxt applications.</dd></div>
+              <div><dt>My Role</dt><dd>Creator &amp; Maintainer</dd></div>
               <div><dt>Technical Focus</dt><dd>Package architecture, Nuxt, TypeScript, authentication functionality, documentation, and reusable developer experience.</dd></div>
               <div><dt>Engineering Concepts</dt><dd>Authentication state, API integration, reusable package design, composables, and developer documentation.</dd></div>
               <div><dt>Community</dt><dd>The project is open source and publicly available on GitHub for use by other developers and projects.</dd></div>
             </dl>
-            <a class="button primary" href="https://github.com/paaqwesilowelltetteh/nuxt-bearer-auth" target="_blank" rel="noreferrer">View on GitHub</a>
+            <a class="button primary" href="https://github.com/paaqwesilowelltetteh/nuxt-bearer-auth" target="_blank" rel="noreferrer">
+              <AppIcon name="github" size="1.1em" />
+              View on GitHub
+            </a>
           </div>
         </div>
       </section>
@@ -171,7 +191,10 @@ useHead({
           <h2>Want the full story?</h2>
           <p>Download my CV for a detailed overview of my experience, technical skills, projects, and engineering background.</p>
         </div>
-        <a v-if="hasCv" class="button primary" :href="cvPath" download>Download CV</a>
+        <a v-if="hasCv" class="button primary" :href="cvPath" download>
+          <AppIcon name="arrow-top-right" size="1.05em" />
+          Download CV
+        </a>
         <span v-else class="button disabled" aria-disabled="true">CV coming soon</span>
       </section>
 
